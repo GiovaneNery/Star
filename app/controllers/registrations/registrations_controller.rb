@@ -9,13 +9,6 @@ class Registrations::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  def create
-    super do |resource|
-      if params[:user][:photo].present?
-        resource.photo.attach(params[:user][:photo])
-      end
-    end
-  end
 
   # POST /resource
   # def create
@@ -70,6 +63,6 @@ class Registrations::RegistrationsController < Devise::RegistrationsController
   private
 
   def sign_up_params
-    params.require(resource_name).permit(:email, :password, :password_confirmation, :photo)
+    params.require(:user).permit(:email, :password, :password_confirmation, :photo)
   end
 end
