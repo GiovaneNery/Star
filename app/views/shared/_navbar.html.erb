@@ -18,9 +18,7 @@
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %>
           </li>
           <li class="nav-item">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill, class: "avatar", alt: "profile picture" %>
-          <% end %>
+          <%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill, class: "avatar", alt: "profile picture" %>
           </li>
         <% else %>
           <li class="nav-item">
