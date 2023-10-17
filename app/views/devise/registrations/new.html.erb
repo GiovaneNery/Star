@@ -9,15 +9,25 @@
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
+              <label for="user_role">Select Role</label>
+              <% User.roles.keys.each do |role| %>
+                <label>
+                  <%= f.radio_button :role, role %>
+                  <%= role.humanize %>
+                </label>
+              <% end %>
+            </div>
+
+            <div class="field">
+              <%= f.input :email, input_html: { autocomplete: "email" }, label: "Email" %>
+            </div>
+
+            <div class="field">
               <%= f.input :first_name, input_html: { autocomplete: "given-name" }, label: "First Name" %>
             </div>
 
             <div class="field">
               <%= f.input :last_name, input_html: { autocomplete: "family-name" }, label: "Last Name" %>
-            </div>
-
-            <div class="field">
-              <%= f.input :email, autofocus: true, input_html: { autocomplete: "email" }, label: "Email" %>
             </div>
 
             <div class="field">
