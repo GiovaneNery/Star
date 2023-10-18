@@ -8,15 +8,13 @@
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
-            <div class="field">
-              <label for="user_role">Select Role</label>
-              <% User.roles.keys.each do |role| %>
-                <label>
-                  <%= f.radio_button :role, role %>
-                  <%= role.humanize %>
-                </label>
-              <% end %>
-            </div>
+            <%= f.input :role,
+                        as: :radio_buttons,
+                        collection_wrapper_tag: 'div',
+                        collection_wrapper_class: 'role-wrapper',
+                        item_wrapper_class: 'role-item',
+                        input_html: {class: 'role-selector'},
+                        collection: User.roles.keys.map { |role| [role.humanize, role] } %>
 
             <div class="field">
               <%= f.input :email, input_html: { autocomplete: "email" }, label: "Email" %>
