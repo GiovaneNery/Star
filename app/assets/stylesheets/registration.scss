@@ -10,63 +10,63 @@
   margin-bottom: 10px; /* Adjust the value to control the spacing */
 }
 
-.role-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+// .role-wrapper {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
 
-.role-item {
-  flex: 0 0 30%;
-}
+// .role-item {
+//   flex: 0 0 30%;
+// }
 
-.role-selector {
-  position: absolute;
-  transform: scale(0);
-}
+// .role-selector {
+//   position: absolute;
+//   transform: scale(0);
+// }
 
-.role-selector + label {
-  display: block;
-  cursor: pointer;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 12px;
-  text-align: left;
-  padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
-  border-radius: 4px;
-  background-color: white;
-}
+// .role-selector + label {
+//   display: block;
+//   cursor: pointer;
+//   box-sizing: border-box;
+//   width: 100%;
+//   font-size: 12px;
+//   text-align: left;
+//   padding: 10px 10px 30px 10px;
+//   border: 1px solid #EAEAEA;
+//   border-radius: 4px;
+//   background-color: white;
+// }
 
-.role-selector:checked + label {
-  color: white !important;
-}
+// .role-selector:checked + label {
+//   color: white !important;
+// }
 
-#user_role_star + label {
-  color: #FD1015;
-}
+// #user_role_star + label {
+//   color: #FD1015;
+// }
 
-#user_role_star:checked + label {
-  background-color: #FD1015;
-  border-color: #FD1015;
-}
-
-
-#user_role_angel + label {
-  color: #FFC65A;
-}
-
-#user_role_angel:checked + label {
-  background-color: #FFC65A;
-  border-color: #FFC65A;
-}
+// #user_role_star:checked + label {
+//   background-color: #FD1015;
+//   border-color: #FD1015;
+// }
 
 
-#user_role_company + label {
-  color: #62DDF5;
-}
+// #user_role_angel + label {
+//   color: #FFC65A;
+// }
 
-#user_role_company:checked + label {
-  background-color: #62DDF5;
-  border-color: #62DDF5;
-}
+// #user_role_angel:checked + label {
+//   background-color: #FFC65A;
+//   border-color: #FFC65A;
+// }
+
+
+// #user_role_company + label {
+//   color: #62DDF5;
+// }
+
+// #user_role_company:checked + label {
+//   background-color: #62DDF5;
+//   border-color: #62DDF5;
+// }
