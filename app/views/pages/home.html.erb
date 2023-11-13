@@ -1,14 +1,26 @@
-<div class="container homepage-container d-flex mt-5">
+<div class="container homepage-container mt-5">
   <div class="block-homepage d-flex">
     <div class="titleblock">
-      <h1>Star</h1>
-      <p>"Empowering Dreams: Connecting Brazilian Talent with German Opportunities. Join our platform where dedicated volunteers (Angels) mentor aspiring stars (Candidates) to bridge the gap of skilled professionals in Germany. Let's shape the future together!"</p>
+      <p class="text-light">Empowering Dreams: Connecting Brazilian Talent with German Opportunities. Join our platform where dedicated volunteers (Angels) mentor aspiring stars (Candidates) to bridge the gap of skilled professionals in Germany.</p>
+      <p class="text-light">Let's shape the future together!</p>
       <div class="buttons mt-5">
         <%= link_to "Get Started", new_user_registration_path, class:"btn btn-primary" %>
       </div>
     </div>
     <div>
-      <img class="image-homepage my-5" src="https://res.cloudinary.com/ddfjqexgw/image/upload/v1696683459/Star/Homepage/homepage-image_inxb1o.jpg" width="400" height="300" alt="Your Image Description">
+      <img class="image-homepage" src="https://res.cloudinary.com/ddfjqexgw/image/upload/v1699898731/homepage-image-animated_zg2g4h.png" width="400" height="400" alt="Your Image Description">
     </div>
+  </div>
+  <h1 class="text-light text-center my-5">Our Mentors</h1>
+  <div class="cards mb-5">
+    <% @user.each do |user| %>
+      <div class="card-product mx-2">
+        <%= cl_image_tag user.photo.key %>
+        <div class="card-product-infos">
+          <h2><%= user.first_name %> <%= user.last_name %></h2>
+          <p>Job Role</p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

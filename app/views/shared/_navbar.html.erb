@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand m-2" do %>
       <%= image_tag "https://res.cloudinary.com/ddfjqexgw/image/upload/v1699796887/starin-complete-logo-full-color-version-rgb-29.9861in_300ppi_x6v7gc.png" %>
     <% end %>
 
@@ -24,7 +24,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-primary nav-link text-light" %>
           </li>
         <% end %>
       </ul>
