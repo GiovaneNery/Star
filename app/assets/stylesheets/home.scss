@@ -1,10 +1,14 @@
-.homepage-container{
-  background-color: rgb(240, 240, 240);
+body{
+  background-image: url("https://res.cloudinary.com/ddfjqexgw/image/upload/v1699894151/vector-illustration-free-space-artwork_fpbopb.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .titleblock{
-  background-color: rgb(240, 240, 240);
-  padding: 48px;
+  padding: 55px;
+  font-size: 20px;
+  padding-right: 155px;
 }
 
 .image-homepage{
@@ -13,7 +17,6 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #f0f0f0
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,10 +24,50 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 90px;
+  width: 150px;
 }
 
 .avatar{
   width: 40px;
   border-radius: 20px;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  width: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
 }
