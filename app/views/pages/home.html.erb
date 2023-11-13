@@ -11,13 +11,13 @@
       <img class="image-homepage" src="https://res.cloudinary.com/ddfjqexgw/image/upload/v1699898731/homepage-image-animated_zg2g4h.png" width="400" height="400" alt="Your Image Description">
     </div>
   </div>
-  <h1 class="text-light text-center my-5">Our Mentors</h1>
+  <h1 class="text-light text-center my-5">Our Angels</h1>
   <div class="cards mb-5">
-    <% @user.each do |user| %>
+    <% @angels.each do |angel| %>
       <div class="card-product mx-2">
-        <%= cl_image_tag user.photo.key %>
+        <%= cl_image_tag angel.photo.key %>
         <div class="card-product-infos">
-          <h2><%= user.first_name %> <%= user.last_name %></h2>
+          <h2><%= angel.first_name %> <%= angel.last_name %></h2>
           <p>Job Role</p>
         </div>
       </div>
