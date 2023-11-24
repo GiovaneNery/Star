@@ -4,7 +4,10 @@
       <p class="text-light">Empowering Dreams: Connecting Brazilian Talent with German Opportunities. Join our platform where dedicated volunteers (Angels) mentor aspiring stars (Candidates) to bridge the gap of skilled professionals in Germany.</p>
       <p class="text-light">Let's shape the future together!</p>
       <div class="buttons mt-5">
-        <%= link_to "Get Started", new_user_registration_path, class:"btn btn-primary" %>
+        <% if current_user %>
+        <% else %>
+          <%= link_to "Get Started", new_user_registration_path, class:"btn btn-primary" %>
+        <% end %>
       </div>
     </div>
     <div>
@@ -18,7 +21,7 @@
         <%= cl_image_tag angel.photo.key %>
         <div class="card-product-infos">
           <h2><%= angel.first_name %> <%= angel.last_name %></h2>
-          <p>Job Role</p>
+          <p><%= angel.professional_position %></p>
         </div>
       </div>
     <% end %>
