@@ -8,39 +8,47 @@
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
-            <%= f.input :role,
-                        as: :radio_buttons,
-                        collection_wrapper_tag: 'div',
-                        collection_wrapper_class: 'role-wrapper',
-                        item_wrapper_class: 'role-item',
-                        input_html: {class: 'role-selector'},
-                        collection: User.roles.keys.map { |role| [role.humanize, role] } %>
-
             <div class="field">
-              <%= f.input :email, input_html: { autocomplete: "email" }, label: "Email" %>
+              <div class="role-wrapper">
+                <% User.roles.keys.each do |role| %>
+                  <label class="role-item">
+                    <%= radio_button_tag "#{resource_name}[role]", role, resource.role == role, class: 'role-selector' %>
+                    <%= role.humanize %>
+                  </label>
+                <% end %>
+              </div>
             </div>
 
             <div class="field">
-              <%= f.input :first_name, input_html: { autocomplete: "given-name" }, label: "First Name" %>
+              <%= f.email_field :email, autocomplete: "email", placeholder: 'Email' %>
             </div>
 
             <div class="field">
-              <%= f.input :last_name, input_html: { autocomplete: "family-name" }, label: "Last Name" %>
+              <%= f.text_field :first_name, autocomplete: "given-name", placeholder: 'First Name' %>
             </div>
 
             <div class="field">
-              <%= f.input :password, input_html: { autocomplete: "new-password" }, label: "Password" %>
+              <%= f.text_field :last_name, autocomplete: "given-name", placeholder: 'Last Name' %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
               <% if @minimum_password_length %>
                 <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %>
             </div>
 
             <div class="field">
-              <%= f.input :password_confirmation, input_html: { autocomplete: "new-password" }, label: "Password Confirmation" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
             </div>
 
             <div class="field">
-              <%= f.input :photo, as: :file, label: "Photo" %>
+              <%= f.text_field :professional_position, placeholder: 'Professional Position' %>
+            </div>
+
+            <div class="field">
+              <%= label_tag :photo, "Profile Picture" %><br />
+              <%= f.file_field :photo %>
             </div>
 
             <div class="actions">
