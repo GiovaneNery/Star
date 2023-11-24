@@ -1,8 +1,8 @@
-<h2>Profile Page</h2>
+<h2 class="text-light">Profile Page</h2>
 <div class="d-flex">
   <%= cl_image_tag current_user.photo.key, crop: :fill, class:"profile-picture", alt: "profile picture" %>
   <div class="data mx-5">
-    <h4>Hello, <%= current_user.first_name %> <%= current_user.last_name %></h4>
-    <h5>Role: <%= current_user.role %></h5>
+    <h4 class="text-light">Hello, <%= current_user.first_name %> <%= current_user.last_name %></h4>
+    <h5 class="text-light"><%= current_user.role %></h5>
   </div>
 </div>
