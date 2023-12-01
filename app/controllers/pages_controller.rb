@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @angels = User.where(role: "Angel")
+    @companies = Company.all
   end
 
   def profile

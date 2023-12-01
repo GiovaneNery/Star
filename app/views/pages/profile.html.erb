@@ -1,8 +1,18 @@
-<h2 class="text-light">Profile Page</h2>
-<div class="d-flex">
-  <%= cl_image_tag current_user.photo.key, crop: :fill, class:"profile-picture", alt: "profile picture" %>
-  <div class="data mx-5">
-    <h4 class="text-light">Hello, <%= current_user.first_name %> <%= current_user.last_name %></h4>
-    <h5 class="text-light"><%= current_user.role %></h5>
+<% if user_signed_in? %>
+  <h2 class="text-light">Profile Page</h2>
+  <div class="d-flex">
+    <%= cl_image_tag current_user.photo.key, crop: :fill, class:"profile-picture", alt: "profile picture" %>
+    <div class="data mx-5">
+      <h4 class="text-light"><%= current_user.first_name %> <%= current_user.last_name %></h4>
+      <h5 class="text-light"><%= current_user.role %></h5>
+    </div>
   </div>
-</div>
+<% elsif company_signed_in? %>
+  <h2 class="text-light">Company Page</h2>
+    <div class="d-flex">
+      <%= cl_image_tag current_company.photo.key, crop: :fill, class:"profile-picture", alt: "company picture" %>
+      <div class="data mx-5">
+        <h4 class="text-light"><%= current_company.company_name %></h4>
+      </div>
+    </div>
+<% end %>
