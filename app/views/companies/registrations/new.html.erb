@@ -3,28 +3,12 @@
     <div class="col-md-4">
       <div class="card big-card bg-light text-dark bg-opacity-40 mt-3 ">
         <div class="card-body">
-          <h2 class="card-title">Sign up</h2>
-
+          <h2 class="card-title">Sign up as a Company</h2>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
-              <div class="role-wrapper">
-                <% User.roles.keys.each do |role| %>
-                  <label class="role-item">
-                    <%= radio_button_tag "#{resource_name}[role]", role, resource.role == role, class: 'role-selector' %>
-                    <%= role.humanize %>
-                  </label>
-                <% end %>
-              </div>
-            </div>
-
-            <div class="field">
-              <%= f.text_field :first_name, autocomplete: "given-name", placeholder: 'First Name' %>
-            </div>
-
-            <div class="field">
-              <%= f.text_field :last_name, autocomplete: "given-name", placeholder: 'Last Name' %>
+              <%= f.text_field :company_name, autocomplete: "company-name", placeholder: 'Company Name' %>
             </div>
 
             <div class="field">
@@ -43,11 +27,7 @@
             </div>
 
             <div class="field">
-              <%= f.text_field :professional_position, placeholder: 'Professional Position' %>
-            </div>
-
-            <div class="field">
-              <%= label_tag :photo, "Profile Picture" %><br />
+              <%= label_tag :photo, "Company Picture" %><br />
               <%= f.file_field :photo %>
             </div>
 

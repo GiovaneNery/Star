@@ -1,10 +1,8 @@
-class User < ApplicationRecord
+class Company < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_one_attached :photo
-  validates :role, presence: true
-
-  enum role: { Star: 'Star', Angel: 'Angel' }
+  validates :company_name, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
