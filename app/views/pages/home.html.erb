@@ -7,7 +7,7 @@
         <% if current_user | current_company %>
         <% else %>
           <%= link_to "Get Started", new_user_registration_path, class:"btn btn-primary" %>
-          <%= link_to "Get Started as a Company", new_company_registration_path, class:"btn btn-primary mx-2" %>
+          <%#= link_to "Get Started as a Company", new_company_registration_path, class:"btn btn-primary mx-2" %>
         <% end %>
       </div>
     </div>
@@ -38,4 +38,5 @@
       </div>
     <% end %>
   </div>
+  <h1 class="text-light text-center my-5">Why you should get registered</h1>
 </div>
