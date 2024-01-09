@@ -1,3 +1,9 @@
 .question-card{
   width: 300px;
+  height: 350px;
+}
+
+.question-card:hover{
+  color: black;
+  transition: 0.7s;
 }

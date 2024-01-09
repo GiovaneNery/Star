@@ -1,8 +1,10 @@
-<div class="d-flex">
-  <div class="card btn question-card mx-5">
-    <h2>Login as</h2>
-  </div>
-  <div class="card btn question-card">
-    <h2>Login as</h2>
-  </div>
+<div class="d-flex justify-content-center">
+  <%= link_to new_user_session_path, class:"card btn question-card mx-5" do %>
+    <h2> Star / Angel</h2>
+    <%= image_tag "https://res.cloudinary.com/ddfjqexgw/image/upload/v1704825289/Star/Homepage/star_and_angel_a8vrof.png" %>
+  <% end %>
+  <%= link_to new_company_session_path, class:"card btn question-card" do %>
+    <h2> Company</h2>
+    <%= image_tag "https://res.cloudinary.com/ddfjqexgw/image/upload/v1704825568/Star/Homepage/company_uctgsa.png" %>
+  <% end %>
 </div>
