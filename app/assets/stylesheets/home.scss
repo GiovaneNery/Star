@@ -74,12 +74,33 @@ body{
 
 .card-wysgr{
   overflow: hidden;
-  height: 120px;
-  width: 400px;
+  height: 270px;
+  width: 250px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .card-wysgr-infos{
   padding: 16px;
+  margin-top: 25px;
+}
+
+
+.top-image {
+  margin-top: -25px;
+  margin-left: -25px;
+  position: absolute;
+}
+
+.bottom-navbar {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+  border-radius: 30px 30px 0% 0%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
